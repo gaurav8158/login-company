@@ -34,18 +34,18 @@
           <input type="checkbox" name="remember"> Remember me
         </label>
   
-        <input oneClick="send();" type="submit" value="Login">
+        <input onClick="send();" type="submit" value="Login">
       </form>
     </body>
     <script>
       function send(){
-        let name = document.getElementByID('name').value;
-        let password = document.getElementByID('password').value;
+        let name = document.getElementById('name').value;
+        let password = document.getElementById('password').value;
 
-        const formdata =new Formdata();
+        const formdata =new FormData();
 
-        formdata.append("name",name)
-        formdata.append("password",password)
+        formdata.append("name",name);
+        formdata.append("password",password);
 
         const xhr = new XMLHttpRequest();
 
